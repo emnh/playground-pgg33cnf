@@ -1,4 +1,4 @@
-title: Simple C++ Template
+title: Fast 6x12 Connected Components using bit-optimized BFS
 plan:
 - title: C++ Snippet
   statement: statement.md
