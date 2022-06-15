@@ -4,7 +4,8 @@ This is pretty standard BFS, just bit-optimized and with a lookup table for neig
 Performance varies a lot depending on how densely populated the bitboards are,
 and that in turn depends a lot on the random seed they are initialized with.
 But you can expect 2-5 millions of iterations per 100ms, suitable for Smash the Code.
-Enough talk, here's to the code:
+Performance seems to be about same with and without target set to sse+avx.
+Default is without. Enough talk, here's to the code:
 
 ```C++ runnable
 #pragma GCC optimize("Ofast","unroll-loops","omit-frame-pointer","inline")
