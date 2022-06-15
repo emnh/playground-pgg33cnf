@@ -4,8 +4,11 @@ This is pretty standard BFS, just bit-optimized and with a lookup table for neig
 Performance varies a lot depending on how densely populated the bitboards are,
 and that in turn depends a lot on the random seed they are initialized with.
 But you can expect 2-5 millions of iterations per 100ms, suitable for Smash the Code.
-Performance seems to be about same with and without target set to sse+avx.
-Default is without. Enough talk, here's to the code:
+Performance seems to be about same with and without global target set to sse+avx,
+but I do have an avx2 target locally around popcount code which improves performance by about 50%.
+For historical reasons I had some code that didn't optimize well with AVX on older gcc than 12,
+that's why I chose to enable it only for critical sections by default.
+Global default is without avx target. Enough talk, here's to the code:
 
 ```C++ runnable
 #pragma GCC optimize("Ofast","unroll-loops","omit-frame-pointer","inline")
