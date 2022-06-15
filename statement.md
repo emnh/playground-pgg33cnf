@@ -352,11 +352,6 @@ public:
 };
 
 typedef mybitsetT<converter128, BOARD_T> mybitset;
-typedef mybitsetT<converter64, uint64_t> mybitset64;
-typedef mybitsetT<converter32, uint32_t> mybitset32;
-typedef mybitsetT<converter32, uint64_t> threeRowsBitset;
-typedef mybitsetT<converter16, uint16_t> twoRowsBitset;
-typedef mybitsetT<converter8, uint8_t> oneRowBitset;
 
 class Bitboard {
 public:
